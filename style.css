@@ -4,7 +4,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 25vh 25vh 25vh 25vh 25vh 25vh 25vh 25vh 25vh 25vh 25vh 25vh 25vh 25vh;
-	background-color: blueviolet;
+	background-color: rgb(78, 78, 78);
 	overflow: hidden;
 }
 
@@ -16,37 +16,31 @@ section {
 }
 
 #welcome {
-	background-color: blanchedalmond;
 	grid-column: 1/2;
 	grid-row: 1/5;
 }
 
 #home {
-	background-color: brown;
 	grid-column: 3/4;
 	grid-row: 9/13;
 }
 
 #wedding-venue {
-	background-color: burlywood;
 	grid-column: 1/2;
 	grid-row: 9/13;	
 }
 
 #wedding-lunch {
-	background-color: cadetblue;
 	grid-column: 2/3;
 	grid-row: 8/12;
 }
 
 #reception {
-	background-color: coral;
 	grid-column: 4/5;
 	grid-row: 11/15;
 }
 
 #rsvp {
-	background-color: cornflowerblue;
 	grid-column: 1/2;
 	grid-row: 5/9;
 }
