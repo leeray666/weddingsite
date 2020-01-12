@@ -3,7 +3,7 @@ blockquote,body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textare
 body {
 	background: #334d5c;
 	position: relative;
-	width: 100%;
+	width: 500%;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	font-family: Tahoma, sans-serif;
