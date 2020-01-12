@@ -2,6 +2,57 @@ blockquote,body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textare
 
 body {
 	display: grid;
+	grid-template-columns: 100px 100px 100px 100px 100px;
+	grid-template-rows: 20px 20px 20px 20px 20px;
+	background-color: blueviolet;
+}
+
+section {
+	/* width: 100vw;
+	height: 100vh; */
+}
+
+#home {
+	background-color: brown;
+	grid-column: 4 / 5;
+	grid-row: 
+}
+
+#wedding-venue {
+	background-color: burlywood;
+	grid-column: 2 / 3;
+	grid-row: 	
+}
+
+#wedding-lunch {
+	background-color: cadetblue;
+	grid-column: 3 / 4;
+	grid-row: 
+}
+
+#reception {
+	background-color: coral;
+	grid-column: 5 / 6;
+	grid-row: 
+}
+
+#rsvp {
+	background-color: cornflowerblue;
+	grid-column: 1 / 2;
+	grid-row: 
+}
+
+
+
+
+
+
+
+
+
+
+/* body {
+	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
 	background: #334d5c;
@@ -37,4 +88,4 @@ body {
 
 #slide6 {
 	background: cyan;
-}
+} */
