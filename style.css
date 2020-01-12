@@ -3,43 +3,43 @@ blockquote,body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textare
 body {
 	display: grid;
 	grid-template-columns: 200px 200px 200px 200px 200px;
-	grid-template-rows: 50px 50px 50px 50px 50px;
+	grid-template-rows: 25px 25px 25px 25px 25px 25px 25px;
 	background-color: blueviolet;
 }
 
-/* section {
- width: 100vw;
-	height: 100vh;
-} */
+section {
+ 	width: 200px;
+	height: 100px;
+}
 
 #home {
 	background-color: brown;
 	grid-column: 4 / 5;
-	grid-row: 1 / 2;
+	grid-row: 2 / 6;
 }
 
 #wedding-venue {
 	background-color: burlywood;
 	grid-column: 2 / 3;
-	grid-row: 2 / 3;	
+	grid-row: 1 / 5;	
 }
 
 #wedding-lunch {
 	background-color: cadetblue;
 	grid-column: 3 / 4;
-	grid-row: 3 / 4;
+	grid-row: 2 / 6;
 }
 
 #reception {
 	background-color: coral;
 	grid-column: 5 / 6;
-	grid-row: 4 / 5;
+	grid-row: 3 / 7;
 }
 
 #rsvp {
 	background-color: cornflowerblue;
 	grid-column: 1 / 2;
-	grid-row: 5 / 6;
+	grid-row: 3 / 7;
 }
 
 
