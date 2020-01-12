@@ -2,8 +2,8 @@ blockquote,body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,pre,td,textare
 
 body {
 	display: grid;
-	grid-template-columns: repeat (5, 100vw);
-	grid-template-rows: repeat (10, 10vh);
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
 	background: #334d5c;
 	position: relative;
 	overflow-x: hidden;
