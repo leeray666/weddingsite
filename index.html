@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Simple Ascensor Plugin Demo</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    
+    <div>
+
+        <a href="#slide2">click to start</a>
+
+    </div>
+    
+	<div id="slide1" class="page" data-x="0" data-y="105">
+        <button id="move">
+            <a href="#slide2">Section 2</a>
+        </button>
+    </div>
+    
+	<div id="slide2" class="page" data-x="3" data-y="102">
+        <button id="move">
+            <a href="#slide3">Section 3</a>
+        </button>
+    </div>
+    
+    
+	<div id="slide3" class="page" data-x="0" data-y="102">
+        <button id="move">
+            <a href="#slide4">Section 4</a>
+        </button>
+    </div>
+    
+    
+    <div id="slide4" class="page" data-x="1" data-y="100">
+        <button id="move">
+            <a href="#slide5">Section 5</a>
+        </button>
+    </div>
+    
+    
+	<div id="slide5" class="page" data-x="4" data-y="106">
+        <button id="move">
+            <a href="#slide6">Section 6</a>
+        </button>
+    </div>
+    
+    
+    <div id="slide6" class="page" data-x="2" data-y="100">
+        <button id="move">
+            <a href="#slide1">Section 1</a>
+        </button>
+        <form id="myForm" action="https://getsimpleform.com/messages?form_api_token=47ebfb48df6aa8e53e2b42457ecc87d7" method="post">
+            <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+            <!-- <input type='hidden' name='redirect_to' value='#slide6' /> -->
+            <!-- all your input fields here.... -->
+            Name:
+            <input type='text' name='Name' />
+            Starter:
+            <input type='text' name='Starter' />
+            Main Meal:
+            <input type='text' name='Main' />
+
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+
+            <input type='submit' onclick="myFunction()" value="Submit" />
+            
+
+          </form>
+    </div>
+    <script>
+        function myFunction() { document.getElementById("myForm").reset(); }
+    </script>
+    
+<script>
+    $.ajax({
+        dataType: 'jsonp',
+        url: "http://getsimpleform.com/messages/ajax?form_api_token=47ebfb48df6aa8e53e2b42457ecc87d7",
+        data: {
+          name: "John",
+          message: "Boston",
+        }
+      }).done(function() {
+        //callback which can be used to show a thank you message
+        //and reset the form
+        alert("Thank you, for contacting us");
+      });
+    </script>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/simple-ascensor.js" type="text/javascript"></script>
+<!--
+	<script>
+		$('#menu a').simpleAscensor(2500);
+	</script>
+-->
+    <script>
+		$('#move a').simpleAscensor(2500);
+	</script>
+
+</body>
+</html>
