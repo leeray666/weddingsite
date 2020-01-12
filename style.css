@@ -44,8 +44,29 @@ section {
 	grid-row: 4 / 8;
 }
 
+.track {
+	background-color: black;
+}
 
+#home .track {
+	grid-row: 3/4;
+}
 
+#wedding-venue .track {
+	grid-row: 3/4;
+}
+
+#wedding-lunch .track {
+	grid-row: 4/5;
+}
+
+#reception .track {
+	grid-row: 1/2;
+}
+
+#rsvp .track {
+	grid-row: 1/2;
+}
 
 
 
