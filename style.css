@@ -21,13 +21,13 @@ section {
 #wedding-venue {
 	background-color: burlywood;
 	grid-column: 2 / 3;
-	grid-row: 1 / 5;	
+	grid-row: 2 / 6;	
 }
 
 #wedding-lunch {
 	background-color: cadetblue;
 	grid-column: 3 / 4;
-	grid-row: 2 / 6;
+	grid-row: 1 / 5;
 }
 
 #reception {
