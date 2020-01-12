@@ -12,7 +12,7 @@ section {
  	width: 100vw;
 	height: 100vh;
 	display: grid;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat (4, 1fr);
 }
 
 #welcome {
@@ -74,48 +74,3 @@ section {
 #rsvp .track {
 	grid-row: 1/2;
 }
-
-
-
-
-
-
-
-/* body {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
-	background: #334d5c;
-	position: relative;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	font-family: Tahoma, sans-serif;
-}
-
-.page {
-	width: 100vw; height: 100vh;
-}
-
-#slide1 {
-	background: #45B29D;
-}
-
-#slide2 {
-	background: #E27A3F;
-}
-
-#slide3 {
-	background: #DF4949;
-}
-
-#slide4 {
-	background: #fff;
-}
-
-#slide5 {
-	background: cyan;
-}
-
-#slide6 {
-	background: cyan;
-} */
