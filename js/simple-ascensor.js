@@ -36,13 +36,13 @@
 
                 if( x_position !== 0 ) {
                     $($id).css({
-                        left: x_position +'00vw'
+                        left: x_position +'00%'
                     });
                 }
 
                 if( y_position !== 0 ) {
                     $($id).css({
-                        top: y_position +'0vh'
+                        top: y_position +'0%'
                     });
                 }
             });
