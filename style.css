@@ -5,6 +5,7 @@ body {
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 25vh 25vh 25vh 25vh 25vh 25vh 25vh;
 	background-color: blueviolet;
+	overflow: hidden;
 }
 
 section {
