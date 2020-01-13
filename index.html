@@ -56,6 +56,24 @@
         <button>
             <a href="#home">Click to go to Home</a>
         </button>
+        <form id="myForm" action="https://getsimpleform.com/messages?form_api_token=47ebfb48df6aa8e53e2b42457ecc87d7" method="post">
+            <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+            <!-- <input type='hidden' name='redirect_to' value='#slide6' /> -->
+            <!-- all your input fields here.... -->
+            Name:
+            <input type='text' name='Name' />
+            Starter:
+            <input type='text' name='Starter' />
+            Main Meal:
+            <input type='text' name='Main' />
+
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+
+            <input type='submit' onclick="myFunction()" value="Submit" />
+            
+
+          </form>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
