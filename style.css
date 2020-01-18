@@ -353,9 +353,21 @@
   /* SITE STYLING STARTS HERE */
 
   main { 
-	width: 80vw;
+	display: grid;
+	grid-template-columns: minmax(360px, 1fr);
   }
 
   section {
-	height: 75vh; background: red;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  article {
+	padding: 2rem;
+
+  }
+
+  img {
+	  display: block;
+	  width: 100%;
   }
