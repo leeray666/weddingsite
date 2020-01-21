@@ -61,7 +61,7 @@ img {
         'rsvp map';
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
     main{
         grid-template-columns: 1fr;
     }
