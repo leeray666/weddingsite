@@ -1,12 +1,12 @@
-.lee {grid-area: lee;}
-.lee-pic {grid-area: lee-pic;}
-.rach {grid-area: rach;}
-.rach-pic {grid-area: rach-pic;}
-.venue {grid-area: venue;}
-.venue-pic {grid-area: venue-pic;}
-.lunch {grid-area: lunch;}
-.lunch-pic {grid-area: lunch-pic;}
-.map {grid-area: map;}
+.lee-blurb {grid-area: lee-blurb;}
+.lee {grid-area: lee; background: url(assets/Benches-new.jpg);}
+.rach-blurb {grid-area: rach-blurb;}
+.rach {grid-area: rach; background: url(assets/Shadow-flipped.jpg);}
+.venue-blurb {grid-area: venue-blurb;}
+.venue {grid-area: venue; background: url(assets/Southover1.jpg);}
+.lunch-blurb {grid-area: lunch-blurb;}
+.lunch {grid-area: lunch; background: url(assets/RoM-Lewes.jpg);}
+.map {grid-area: map; background: url(assets/placeholder.jpg);}
 .rsvp{grid-area: rsvp;}
 
 body { 
@@ -37,6 +37,7 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: stretch;
 }
 article{
     margin: 2rem;
@@ -45,39 +46,47 @@ img {
     display: block;
     width: 100%;
 }
+svg {
+    width: 100%;
+}
+.pic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .hero {
     background:url(assets/Rach&LeeHeart-Hero.jpg) center;
     background-size: cover;
 }
 .story {
     grid-template-areas:
-        'lee lee-pic'
-        'rach-pic rach';
+        'lee-blurb lee'
+        'rach rach-blurb';
 }
 .schedule {
     grid-template-areas:
-        'venue venue-pic'
-        'lunch-pic lunch'
+        'venue-blurb venue'
+        'lunch lunch-blurb'
         'rsvp map';
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     main{
         grid-template-columns: 1fr;
     }
     .story {
         grid-template-areas:
+        'lee-blurb'
         'lee'
-        'lee-pic'
-        'rach'
-        'rach-pic';
+        'rach-blurb'
+        'rach';
     }
     .schedule {
         grid-template-areas: 
-        'venue-pic'
         'venue'
-        'lunch-pic'
+        'venue-blurb'
         'lunch'
+        'lunch-blurb'
         'map'
         'rsvp';
     }
