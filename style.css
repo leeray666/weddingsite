@@ -47,7 +47,7 @@ header {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    background: white;
+    background: rgba(255,255,255,0.8);
     grid-area: 2/2/3/3;
     width:285px;
     height:285px;
