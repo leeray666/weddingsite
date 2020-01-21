@@ -47,7 +47,7 @@ header {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.95);
     grid-area: 2/2/3/3;
     width:285px;
     height:285px;
@@ -55,7 +55,6 @@ header {
     font-family: proxima-nova, sans-serif;
     text-transform: uppercase;
     text-align: center;
-
 }
 .card h1 {
     font-weight: 800; font-size: 3.5rem; line-height:3.5rem; letter-spacing:5px;
