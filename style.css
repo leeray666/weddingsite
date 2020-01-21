@@ -39,13 +39,11 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 article{
-    max-width: 800px;
     margin: 2rem;
 }
 img {
     display: block;
     width: 100%;
-    max-width: 800px;
 }
 .hero {
     background:url(assets/Rach&LeeHeart-Hero.jpg) center;
@@ -63,7 +61,7 @@ img {
         'rsvp map';
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     main{
         grid-template-columns: 1fr;
     }
