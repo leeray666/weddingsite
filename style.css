@@ -1,14 +1,7 @@
-* {padding:0; margin:0; box-sizing: border-box; text-decoration: none;}
+* {padding: 0; margin: 0; box-sizing: border-box; text-decoration: none;}
 
 .grey {}
 .black {color: #040404;}
-
-p, a { font-family: mrs-eaves, serif; font-weight: 400; font-style: normal; }
-h1 { font-family: 'Dawning of a New Day', cursive;;}ß
-h2 { font-family: mrs-eaves-roman-small-caps, sans-serif; font-weight: 400; font-style: normal; }
-h3 { font-family: mrs-eaves, sans-serif; font-weight: 700; font-style: normal; }
-
-
 
 .lee-blurb {grid-area: lee-blurb;}
 .rach-blurb {grid-area: rach-blurb;}
@@ -79,6 +72,8 @@ main {
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
 }
+
+main h1, h2, h3, h4, p, a { font-family: 'EB Garamond', serif; }
 
 main p {line-height: 2rem;}
 
