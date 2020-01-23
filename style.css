@@ -140,7 +140,6 @@ footer {
 }
 
 .hero { 
-    min-height: 365px;
     max-height: 1000px;
     background-position: center;
     background-repeat: no-repeat;
