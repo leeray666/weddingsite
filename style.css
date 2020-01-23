@@ -98,7 +98,7 @@ svg {
 .hero {
     background:url(assets/Rach&LeeHeart-Hero.jpg) center;
     background-size: cover;
-    margin-bottom: -4px;
+    display:block;
 }
 .story {
     grid-template-areas:
