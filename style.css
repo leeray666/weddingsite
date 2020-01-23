@@ -121,10 +121,12 @@ footer {
     padding: 15px;
     text-align: center;
 }
+
 .card h1 {
     letter-spacing:5px;
     color: #040404;
 }
+
 .card p {
     font-size: 13px;
     letter-spacing:3px;
