@@ -13,6 +13,8 @@
 body { 
     margin: 0 auto;
     max-width: 1920px;
+    font-size: calc(16px + (26 - 16) * ((100vw - 365px) / (1920 - 365)));
+    line-height: calc(1.4em + (3 - 1.4) * ((100vw - 365px) / (1920 - 365)));
 }
 
 svg {
@@ -128,8 +130,6 @@ footer {
 }
 
 .card p {
-    font-size: 13px;
-    letter-spacing:3px;
     color: #707070;
 }
 
@@ -153,6 +153,7 @@ article{
     font-family: garamond-premier-pro, serif;
     font-weight: 400;
     font-style: italic;
+
 }
 section {
     margin: 2rem;
