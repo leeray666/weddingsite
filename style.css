@@ -6,6 +6,11 @@
     padding: 0;
 }
 
+html{
+    font-size: calc(16px + (26 - 16) * ((100vw - 365px) / (1920 - 365)));
+    line-height: calc(1.4em + (3 - 1.4) * ((100vw - 365px) / (1920 - 365)));
+}
+
 .bold {
     font-weight:700;
   }
@@ -13,8 +18,7 @@
 body { 
     margin: 0 auto;
     max-width: 1920px;
-    font-size: calc(16px + (26 - 16) * ((100vw - 365px) / (1920 - 365)));
-    line-height: calc(1.4em + (3 - 1.4) * ((100vw - 365px) / (1920 - 365)));
+
 }
 
 svg {
@@ -165,14 +169,9 @@ section ul {
     font-style: normal;
 }
 
-section li:first-child {
-    font-size: 1.3rem;
-}
-
 section li {
-    padding:.2rem;
+    padding:.1rem;
 }
-
 
 .pic {
     min-height: 360px;
