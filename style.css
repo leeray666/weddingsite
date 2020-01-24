@@ -16,20 +16,17 @@
     font-weight:700;
   }
 
-
 svg {
     width: 100%;
     height:100%;
     display:block;
 }
-
-
- /*----------------------structure
---------------------------------*/
-
 html{
     font-size: calc(16px + (26 - 16) * ((100vw - 365px) / (1920 - 365)));
 }
+
+ /*----------------------STRUCTURE
+--------------------------------*/
 
 body { 
     margin: 0 auto;
@@ -40,29 +37,94 @@ header, main, footer {
     width: 100%;
 }
 
+ /*-------------------------HEADER
+--------------------------------*/
+
 header {
-    background:url(assets/Hero-image.jpg) center;
+    background:grey url(assets/Hero-image.jpg) center / cover no-repeat;
     height: 100vmin;
+    max-height: 1000px;
 }
 header.grid {
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: 1fr auto 1fr;
+    grid: 1fr auto 1fr / 1fr auto 1fr;
+}
+header .card {
+    background: rgba(255,255,255,0.95);
+    grid-area: 2/2/3/3;
+    width:285px;
+    padding: 15px;
+    text-align: center;
+}
+header .card h1 {
+    letter-spacing:5px;
+    color: #040404;
+}
+header .card p {
+    color: #707070;
 }
 
-main {
-    background-color: pink;
-    padding: 40px;
-}
+ /*---------------------------MAIN
+--------------------------------*/
+
 main.grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    'lee bench'
-    'shadow rach'
-    'heart heart'
-    'timeline venue'
-    'rom lunch';
+    grid:
+        'lee bench'
+        'shadow rach'
+        'heart heart'
+        'times venue'
+        'rom menu'
+    / 1fr 1fr;
     align-items: stretch;
 }
+.bench { grid-area: bench;}
+.shadow { grid-area: shadow; }
+.heart { grid-area: heart; }
+.venue { grid-area: venue; }
+.rom { grid-area: rom; }
+.rach { grid-area: rach; }
+.lee { grid-area: lee; }
+.menu { grid-area: lunch; } 
+.times { grid-area: time; }
+
+.pic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pic.one { background-image: url(assets/Benches-new.jpg); }
+.pic.two { background-image: url(assets/Shadow-flipped.jpg); }
+.pic.three { background-image:url(assets/Rach&LeeHeart-Hero.jpg); }
+.pic.four { background-image: url(assets/Southover1.jpg); }
+.pic.five { background-image: url(assets/RoM-Lewes.jpg); }
+
+main article {
+    margin: 2rem;
+    font-family: garamond-premier-pro, serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+main ul {
+    text-align: center;
+    font-family: garamond-premier-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+time .grid {
+    grid: 1fr auto 1fr / 1fr auto 1fr;
+}
+
+.straight line {
+    fill:none;stroke:#000000;stroke-miterlimit:10;
+}
+/* .straight svg {
+    height: 100%;
+} */
+
+ /*-------------------------FOOTER
+--------------------------------*/
+
 footer {
     background: #4d6a79;
 }
@@ -72,73 +134,6 @@ footer.grid {
     'rsvp map';
     align-items: stretch;
 }
-
-
-
-
-
-
-
-
-
-
-
-.hero { 
-    max-height: 1000px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
-.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
-
-/*
--------------------------MAIN GRID AREAS
-*/
-
-#lee {
-    grid-area: lee;
-}
-#rach {
-    grid-area: rach;
-}
-#timeline {
-    grid-area: timeline;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr max-content 1fr;
-}
-#timeline div {
-    display:block;
-}
-
-#lunch {
-    grid-area: lunch; margin: 2rem;
-}
-#bench {
-    grid-area: bench;
-    background-image: url(assets/Benches-new.jpg);
-}
-#shadow {
-    grid-area: shadow;
-    background-image: url(assets/Shadow-flipped.jpg);
-}
-
-#heart {background-image:url(assets/Rach&LeeHeart-Hero.jpg);}
-
-#venue {
-    grid-area: venue;
-    background-image: url(assets/Southover1.jpg);
-}
-#rom {grid-area: rom;
-    background-image: url(assets/RoM-Lewes.jpg);
-}
-
-/*
--------------------------FOOTER GRID AREAS
-*/
 
 #rsvp {
     grid-area: rsvp;
@@ -152,44 +147,6 @@ footer.grid {
     overflow: hidden;
 }
 
-/*
--------------------------LAYOUT
-*/
-
-
-.pic {
-    min-height: 360px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
-
-
-
-/*
--------------------------HEADER CARD
-*/
-
-.card {
-    background: rgba(255,255,255,0.95);
-    grid-area: 2/2/3/3;
-    width:285px;
-    padding: 15px;
-    text-align: center;
-}
-
-.card h1 {
-    letter-spacing:5px;
-    color: #040404;
-}
-
-.card p {
-    color: #707070;
-}
-
 #map iframe {
     position: absolute;
     top: 0;
@@ -198,38 +155,23 @@ footer.grid {
     height: 100% !important;
 }
 
-article{
-    margin: 2rem;
-    font-family: garamond-premier-pro, serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-section ul {
-    text-align: center;
-    font-family: garamond-premier-pro, serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-
-
+ /*--------------------MEDIA QUERY
+--------------------------------*/
 
 @media only screen and (max-width: 700px) {
-    main, footer{
-        grid-template-columns: 1fr;
-    }
-    main {
-        grid-template-areas:
+
+    main.grid {
+        grid:
         'lee'
         'bench'
         'rach'
         'shadow'
         'heart'
         'venue'
-        'timeline'
+        'time'
         'rom'
-        'lunch';
+        'lunch'
+        / 1fr;
     }
     footer {
         grid-template-areas: 
