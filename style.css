@@ -22,6 +22,7 @@ svg {
     display:block;
 }
 html{
+    background-color: #fafafa;
     font-size: calc(16px + (26 - 16) * ((100vw - 365px) / (1920 - 365)));
 }
 
@@ -66,6 +67,10 @@ header .card p {
  /*---------------------------MAIN
 --------------------------------*/
 
+main {
+    color: #0b334a;
+}
+
 main.grid {
     grid:
         'lee bench'
@@ -81,8 +86,8 @@ main.grid {
 #heart { grid-area: heart; }
 #venue { grid-area: venue; }
 #rom { grid-area: rom; }
-#rach { grid-area: rach; }
-#lee { grid-area: lee; }
+#rach { grid-area: rach; place-self:center; }
+#lee { grid-area: lee; place-self:center; }
 #time { grid-area: time; }
 #lunch { grid-area: lunch;} 
 
