@@ -244,11 +244,9 @@ footer.grid {
         flex-direction:column;
         align-items: center;
     }
-
     header #card h1 {
         font-size: 20vw;
     }
-
     main.grid {
         grid:
             'lee'
