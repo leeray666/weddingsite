@@ -46,7 +46,7 @@ header, main, footer {
 --------------------------------*/
 
 header {
-    background: url(assets/hero-image-b&w.jpg) center / cover no-repeat;
+    background: url(assets/Hero-image.jpg) center / cover no-repeat;
     height: 100vh;
 }
 
@@ -58,8 +58,8 @@ header {
     align-items: center;
     justify-items: center;
     text-align: center;
-    background-color: #bba47270;
-    background-blend-mode: color;
+    background-color: #5e5e5e50;
+    background-blend-mode: multiply;
 }
 
 #card section { 
@@ -312,9 +312,6 @@ footer.grid {
     }
     #card h1, #card p {
         padding: 0;
-        text-shadow: 
-        0px 0px 1px  rgba(0,0,0,0.7);
-
     }
 
     header section {
