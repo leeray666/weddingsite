@@ -11,6 +11,7 @@
  
 .grid {
     display: grid;
+    grid-template-columns: repeat(10, 10%);
 }
 
 svg {
@@ -46,6 +47,43 @@ header, main, footer {
 --------------------------------*/
 
 header {
+    font-size: 2rem;
+}
+
+header.grid {
+    justify-items: center;
+    grid-template-rows: 200px 1.85rem auto 200px;
+}
+
+header h1 {
+    grid-area: 1/4/3/8;
+    font-family: gill-sans-nova, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    align-self: end;
+}
+header .hero {
+    grid-area: 2/1/4/11;
+}
+
+header h3 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#pic1 { 
+    background: url(assets/Rach&LeeHeart-Hero.jpg) center / cover no-repeat;
+}
+
+
+
+
+
+
+
+
+/* header {
     background: url(assets/Hero-image.jpg) center / cover no-repeat;
     height: 100vh;
 }
@@ -64,7 +102,7 @@ header {
 
 #card section { 
     display:flex;
-}
+} */
 
 /* #card h1 {
     font-size: 10vw;
@@ -78,7 +116,7 @@ header {
         0px 0px 2px  rgba(0,0,0,0.1);
 } */
 
-#card h1 {
+/* #card h1 {
     font-size: 15vw;
     letter-spacing:.1rem;
     padding:.6rem;
@@ -95,12 +133,12 @@ header {
     font-style: normal;
     letter-spacing: 0.2rem;
     color: #fafafa;
-}
+} */
 
  /*---------------------------MAIN
 --------------------------------*/
 
-main {
+/* main {
     color: #0b334a;
     background-color: #fafafa;
     font-family: garamond-premier-pro, serif;
@@ -250,12 +288,12 @@ line, path {
 
 #heart {
     margin-top: 30vmin;
-}
+} */
 
  /*-------------------------FOOTER
 --------------------------------*/
 
-footer {
+/* footer {
     background: #4d6a79;
     padding: 2rem;
     color: #fafafa;
@@ -295,13 +333,13 @@ footer.grid {
     left: 0;
     width: 100% !important;
     height: 100% !important;
-}
+} */
 
  /*--------------------MEDIA QUERY
 --------------------------------*/
 
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
 
     header {
         height: 60vh;
@@ -356,4 +394,4 @@ footer.grid {
         grid-area: 1/1/2/11;
 
     }
-}
+} */
