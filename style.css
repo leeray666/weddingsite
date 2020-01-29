@@ -12,17 +12,20 @@
 html {
     width:100%;
     height:100%;
-    font-size: calc(16px + (22 - 16) * ((100vw - 365px) / (1920 - 365)));
+    /* font-size: calc(16px + (22 - 16) * ((100vw - 365px) / (1920 - 365))); */
+    font-size: 14px;
 }
 body {
     margin: 0 auto;
     max-width: 1920px;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
 }
   header, main, footer {
     width:100%;
 }
-
 /*--------------------class styles
 --------------------------------*/
 .grid {
@@ -33,31 +36,24 @@ svg {
     height:100%;
     display:block;
 }
-
-
-.aspectRatioSizer {
-    display: grid;
-  }
-
-.aspectRatioSizer {
-    grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(20, 5vw);
-}
-  
-  .aspectRatioSizer svg {
-    grid-area: 1 / 1 / 11 / 11;
-  }
-
  /*-------------------------HEADER
 --------------------------------*/
 header {
     background-color: white;
 }
-
+.aspectRatioSizer {
+    display: grid;
+  }
+.aspectRatioSizer {
+    grid-template-columns: repeat(20, 5vw);
+    grid-template-rows: repeat(20, 5vw);
+} 
+.aspectRatioSizer svg {
+    grid-area: 1 / 1 / 11 / 11;
+}
 .header-image {
     grid-area: 5/1/21/21;
 }
-
 .sexy-title {
     grid-area: 1/1/21/21;
     display:grid;
@@ -66,7 +62,6 @@ header {
     transform: rotate(-90deg);
     mix-blend-mode: difference;
 }
-
 .sexy-title span {
     grid-area:18/7/20/20;
     font-family: gill-sans-nova, sans-serif;
@@ -78,7 +73,6 @@ header {
     mix-blend-mode: difference;
     align-self: center;
 }
-
 .date {
     grid-area: 1/1/21/21;
     display:grid;
@@ -86,7 +80,6 @@ header {
     grid-template-rows: repeat(20, 5vw);
     mix-blend-mode: difference;
 }
-
 .date span {
     grid-area:15/2/16/7;
     font-family: futura-pt, sans-serif;
@@ -98,7 +91,6 @@ header {
     justify-self: start;
     align-self: center;
 }
-
 @media only screen and (min-width: 567px) {
 
     .aspectRatioSizer {
@@ -143,7 +135,6 @@ header {
     }
 
 }
-
 @media only screen and (min-width: 1920px) {
 
     .aspectRatioSizer {
@@ -167,9 +158,38 @@ header {
         font-size: 67px;
     }
 }
-
  /*---------------------------MAIN
 --------------------------------*/
+
+ /*--------------------------STORY
+--------------------------------*/
+
+main section.grid {
+    grid:
+        'lee'
+        'bench'
+        'rach'
+        'shadow'
+    / 1fr;
+}
+#lee {
+    grid-area: lee;
+    place-self:center;
+}
+#rach {
+    grid-area: rach;
+    place-self:center;
+}
+#bench {
+    grid-area: bench;
+    background: grey url(assets/Benches-new.jpg) center / cover no-repeat; }
+#shadow { 
+    grid-area: shadow;
+    background: grey url(assets/Shadow-flipped.jpg) center / cover no-repeat; }
+
+article {
+    margin: 2rem 2rem;
+}    
 
 /* main {
     color: #0b334a;
