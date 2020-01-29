@@ -51,7 +51,7 @@ header {
 }
 .aspectRatioSizer {
     display: grid;
-  }
+}
 .aspectRatioSizer {
     grid-template-columns: repeat(20, 5vw);
     grid-template-rows: repeat(20, 5vw);
@@ -229,7 +229,19 @@ main .italic {
     padding: 2rem;
     margin: 3rem;
 }
+ /*---------------WEDDING-TIMELINE
+--------------------------------*/
+#wedding-timeline {
+    width:100%;
+    justify-items: center;
+}
+#wedding-timeline .vertical {
+    margin-top:1rem;
+}
 
+line, path {
+    fill:none;stroke-miterlimit:10;
+}
 
 
 
