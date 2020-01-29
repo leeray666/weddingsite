@@ -12,26 +12,20 @@
 html {
     width:100%;
     height:100%;
-    /* font-size: calc(16px + (22 - 16) * ((100vw - 365px) / (1920 - 365))); */
 }
-
-}
-
 :root {
     font-size: 14px;
-  }
-  
-  @media (min-width: 700px) and (max-width: 1600px) {
+} 
+@media (min-width: 700px) and (max-width: 1600px) {
     :root {
       font-size: calc( 14px + (26 - 14) * ((100vw - 700px) / (1600 - 700)) );
     }
-  }
-  @media (min-width: 1600px) {
+}
+@media (min-width: 1600px) {
     :root {
       font-size: 26px;
     }
-  }
-
+}
 body {
     margin: 0 auto;
     max-width: 1920px;
@@ -108,23 +102,19 @@ header {
 @media only screen and (min-width: 567px) {
 
     .aspectRatioSizer {
-        grid-template-rows: repeat(14, 5vw);
+        grid-template-rows: repeat(15, 5vw);
     }
-      
     .aspectRatioSizer svg {
         grid-area: 1 / 1 / 15 / 21;
     }
-
     .header-image {
         grid-area: 3/1/14/21;
     }
-    
     .sexy-title {
         grid-area: 1/1/15/21;
-        grid-template-rows: repeat(14, 5vw);
+        grid-template-rows: repeat(15, 5vw);
         transform: rotate(0deg);
     }
-    
     .sexy-title span {
         grid-area:1/6/4/16;
         font-size: 7vw;
@@ -133,13 +123,10 @@ header {
         align-self: end;
         padding-bottom: 1.8vw;
     }
-    
     .date {
         grid-area: 1/1/15/21;
-        grid-template-rows: repeat(14, 5vw);
+        grid-template-rows: repeat(15, 5vw);
     }
-
-
     .date span {
         grid-area:13/15/14/19 ;
         font-size: 3.5vw;
@@ -147,17 +134,16 @@ header {
         justify-self: start;
         align-self: center;
     }
-
 }
 @media only screen and (min-width: 1920px) {
 
     .aspectRatioSizer {
         grid-template-columns: repeat(20, 96px);
-        grid-template-rows: repeat(14, 96px);
+        grid-template-rows: repeat(15, 96px);
     }
     .sexy-title {
         grid-template-columns: repeat(20, 96px);
-        grid-template-rows: repeat(14, 96px);
+        grid-template-rows: repeat(15, 96px);
     }
     .sexy-title span {
         font-size: 135px;
@@ -166,7 +152,7 @@ header {
     }
     .date {
         grid-template-columns: repeat(20, 96px);
-        grid-template-rows: repeat(14, 96px);
+        grid-template-rows: repeat(15, 96px);
     }
     .date span {
         font-size: 67px;
@@ -179,25 +165,20 @@ main {
     font-family: garamond-premier-pro, serif;
     font-weight: 400;
     font-style: normal;
-    /* letter-spacing: 0.01rem; */
 }
 main h1, h2, h3, h4, h5, .bold{
     font-family: garamond-premier-pro, serif;
     font-weight: 600;
     font-style: normal;
 }
-
 main .italic {
     font-family: garamond-premier-pro, serif;
     font-weight: 500;
     font-style: italic;
-    /* font-size: 1.2rem; */
 }
-
  /*--------------------------STORY
 --------------------------------*/
-
-main section.grid {
+#story {
     grid:
         'lee'
         'bench'
@@ -216,24 +197,41 @@ main section.grid {
 #bench {
     grid-area: bench;
     align-self: end;
-    background: url(assets/Benches-new.jpg) center / contain no-repeat; }
+    background: url(assets/Benches-new.jpg) center / contain no-repeat;
+}
 #shadow { 
     grid-area: shadow;
     align-self: start;
-    background: url(assets/Shadow-flipped.jpg) center / contain no-repeat; }
-
-article {
-    margin: 2rem 2rem;
+    background: url(assets/Shadow-flipped.jpg) center / contain no-repeat;
+}
+#story article {
+    margin: 3rem 3rem;
 }    
-
 @media only screen and (min-width: 700px) {
-    main section.grid {
+    #story {
         grid:
             'lee bench'
             'shadow rach'
         / 1fr 1fr;
     }
 }
+ /*-----------------WEDDING-INVITE
+--------------------------------*/
+#wedding-invite {
+    width:100vw;
+    height:100vh;
+    align-items:center;
+    justify-items:center;
+}
+#wedding-invite div {
+    text-align:center;
+    border: black double 3px;
+    padding: 2rem;
+    margin: 3rem;
+}
+
+
+
 
 /* main {
     color: #0b334a;
