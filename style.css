@@ -300,7 +300,7 @@ main .italic {
 #lunch {
     grid-area: lunch;
     padding: 3rem;
-}
+} 
 #lunch .grid {
     padding:3rem;
     grid-template-rows: auto;
