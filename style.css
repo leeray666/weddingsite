@@ -236,41 +236,50 @@ main .italic {
 }
 
 
+/* #wedding {
+    grid:
+        'venue'
+        'wireframe'
+        'upper'
+        'rom'
+        'lunch'
+    / 1fr;
+} */
 
 
 #wedding {
-    justify-items: center;
     grid:
-        'wireframe venue'
-        'upper venue'
-        'lunch rom'
-    auto / 1fr 1fr;
+        [row1-start] 'wireframe venue' minmax(10vw, 100px) [row1-end]
+        [row2-start] 'upper venue' auto [row2-end]
+        [row2-start] 'lunch rom' auto [row2-end]
+    / 1fr 1fr;
 }
 #wireframe {
     grid-area: wireframe;
-    width: 108px;
-    height: 98px;
+    margin: 0 auto;
+    height:10vw;
+    max-height: 100px;
+    /* width: 108px; */
+    /* height: 98px; */
 }
 #upper {
     grid-area: upper;
 }
 
-.order {
-    width:max-content;
-}
-.order ul {
+#order {
+    height:100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
 }
-.order li {
-    height:100%;
+#order li {
     text-align: center;
     padding:.5rem 0;
-    margin:3rem 0;
+    /* margin:3rem 0; */
     background:white;
 }
 .small-heart {
+    margin: 0 auto;;
     width:21px; height:22px;
 }
 .small-heart .st0 {
@@ -279,11 +288,11 @@ main .italic {
 #venue {
     grid-area: venue;
     background: url(assets/Southover1.jpg) center left / cover no-repeat;
-    margin-bottom: 3rem;;
+    margin-bottom: 98px;
 }
 #rom {
     grid-area: rom;
-    background: url(assets/RoM-Lewes.jpg) center / cover no-repeat;
+    background: url(assets/RoM-Lewes.jpg) center / contain no-repeat;
 }
 #lunch {
     grid-area: lunch;
@@ -295,9 +304,7 @@ main .italic {
     padding:3rem;
     grid-template-rows: auto;
     align-items: center;
-    
 }
-
 #lunch li {
     text-align: center;
     padding:.1rem;
