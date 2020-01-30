@@ -243,9 +243,7 @@ main .italic {
     grid:
         'wireframe venue'
         'upper venue'
-        'upper southover'
         'lunch rom'
-        'lunch rights'
     auto / 1fr 1fr;
 }
 #wireframe {
@@ -264,7 +262,6 @@ main .italic {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 .order li {
     height:100%;
@@ -281,32 +278,24 @@ main .italic {
 }
 #venue {
     grid-area: venue;
-    align-self:stretch;
     background: url(assets/Southover1.jpg) center left / cover no-repeat;
-}
-#southover {
-    grid-area: southover;
-    margin:3rem;
-}
-#rights {
-    grid-area: rights;
-    margin: 3rem;
+    margin-bottom: 3rem;;
 }
 #rom {
     grid-area: rom;
-    align-self: stretch;
     background: url(assets/RoM-Lewes.jpg) center / cover no-repeat;
 }
 #lunch {
     grid-area: lunch;
-    padding: 3rem;
+    padding: 1rem;
+    margin: 0 3rem;
+    border: black 3px double;
 } 
 #lunch .grid {
     padding:3rem;
     grid-template-rows: auto;
     align-items: center;
-    border: black 3px double;
-    background:white;
+    
 }
 
 #lunch li {
