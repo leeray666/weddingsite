@@ -1,4 +1,4 @@
-/*-----------------------structure
+/*-----------------------STRUCTURE
 --------------------------------*/
 * {
     margin: 0;
@@ -7,11 +7,11 @@
     text-decoration: none;
     list-style-type: none;
 }
-/*-----------------------structure
---------------------------------*/
 html {
     width:100%;
     height:100%;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 :root {
     font-size: 14px;
@@ -34,7 +34,7 @@ body {
   header, main, footer {
     width:100%;
 }
-/*--------------------class styles
+/*--------------------CLASS STYLES
 --------------------------------*/
 .grid {
     display: grid;
@@ -188,11 +188,11 @@ main .italic {
 }
 #lee {
     grid-area: lee;
-    place-self:center;
+    place-self: center;
 }
 #rach {
     grid-area: rach;
-    place-self:center;
+    place-self: center;
 }
 #bench {
     grid-area: bench;
@@ -218,8 +218,7 @@ main .italic {
  /*-----------------WEDDING-INVITE
 --------------------------------*/
 #wedding-invite {
-    width:100vw;
-    height:100vh;
+    width:100%;
     align-items:center;
     justify-items:center;
 }
@@ -227,94 +226,119 @@ main .italic {
     text-align:center;
     border: black double 3px;
     padding: 2rem;
-    margin: 3rem;
+    margin: 10rem 3rem 10rem 3rem;
 }
  /*---------------WEDDING-TIMELINE
 --------------------------------*/
-#wedding-timeline {
-    width:100%;
-    justify-items: center;
-}
-#wedding-timeline .vertical {
-    margin-top:1rem;
-}
 
-line, path {
-    fill:none;stroke-miterlimit:10;
-}
-
-
-
-/* main {
-    color: #0b334a;
-    background-color: #fafafa;
-    font-family: garamond-premier-pro, serif;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.01rem;
-}
-main h1, h2, h3, h4, h5, .bold{
-    font-family: garamond-premier-pro, serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-main .italic {
-    font-family: garamond-premier-pro, serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 1.2rem;
-}
-
-main.grid {
+#wedding {
     grid:
-        'lee bench'
-        'shadow rach'
-        'site-break-top site-break-top'
-        'time venue'
-        'site-break .'
-        'love love'
-        'rom lunch'
-        'heart heart'
-    / 1fr 1fr;
-    align-items: stretch;
+        'upper'
+        'venue'
+        'lunch'
+        'rom'
+    / 1fr;
 }
-#bench { grid-area: bench;}
-#shadow { grid-area: shadow; }
-#heart { grid-area: heart; }
-#venue { grid-area: venue; }
-#rom { grid-area: rom; }
-#rach { grid-area: rach; place-self:center; }
-#lee { grid-area: lee; place-self:center; }
-#time { grid-area: time; }
-#lunch { grid-area: lunch;}
-#site-break-top {grid-area: site-break-top;}
-#site-break {grid-area: site-break;}
-#love {grid-area:love;} 
-
-.pic {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.timeline {
+    grid-template-columns: 1fr auto 1fr;
+    justify-items: center;  
 }
-.pic.one { background-image: url(assets/Benches-new.jpg); }
-.pic.two { background-image: url(assets/Shadow-flipped.jpg); }
-.pic.three { background-image:url(assets/Rach&LeeHeart-Hero.jpg); }
-.pic.four { background-image: url(assets/Southover1.jpg); background-position: left; }
-.pic.five { background-image: url(assets/RoM-Lewes.jpg); background-position: right;}
-
-main article {
-    margin: 4rem 2rem;
-    line-height: 1.5rem;
+#upper.timeline {
+    grid-area: upper;
+    grid-template-rows: 98px max-content;
 }
-
-main article h2::first-letter {
-    font-size: 3rem;
+#wireframe-heart {
+    width: 108px;
+    height: 98px;
+    align-self: stretch;
+    grid-area: 1/2/2/3;
 }
-
-.center {
+#fuck {
+    grid-area: 2/2/3/3;
+}
+.vertical-line {
+    display:block;
+    min-height:300px;
+    background:black;
+    width:2px;
+}
+#upper .order {
+    grid-area: 2/2/3/3;
+}
+.order {
+    width:max-content;
+}
+.order li {
     text-align: center;
+    margin:3rem 3rem;
 }
+.list-words {
+    background: white;
+}
+.list-words h2 {
+    padding: 6px;
+}
+.list-words h4 {
+    padding: 4px;
+}
+.list-words p {
+    padding: 3px;
+}
+.small-heart {
+    width:21px; height:22px;
+    margin:0 auto;
+}
+.small-heart .st0 {
+    fill:#FFFFFF;
+}
+line, path {
+    fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;
+}
+#venue {
+    grid-area: venue;
+    align-self: stretch;
+    background: url(assets/Southover1.jpg) center left / cover no-repeat;
+}
+#rom {
+    grid-area: rom;
+    align-self: stretch;
+    background: url(assets/RoM-Lewes.jpg) center right / cover no-repeat;
+}
+#lunch {
+    grid-area: lunch;
+}
+#lunch.grid {
+    margin: 3rem;
+    grid-template-rows: auto;
+    align-items: center;
+}
+#lunch li {
+    text-align: center;
+    padding:.1rem;
+}
+#lunch h3, h5 {
+    padding:.2rem;
+}
+#lunch div {
+    padding:1rem;
+}
+.horizontal {
+    max-height: 3px;
+}
+@media only screen and (min-width: 700px) {
+    #wedding {
+        grid:
+            'upper upper venue venue venue'
+            'rom rom lunch lunch lunch'
+        / 3fr 1fr 1fr 1fr 3fr;
+    }
+}
+ /*---------------
+--------------------------------*/
+
+
+
+/* 
 #site-break-top.grid {
     display:grid;
     grid-template-columns: repeat(10, 10%);
