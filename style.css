@@ -44,6 +44,12 @@ svg {
     height:100%;
     display:block;
 }
+line, path {
+    fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:10;
+}
+.backline {
+    background: url(/assets/blackpixel.png) center/1px repeat-y;
+}
  /*-------------------------HEADER
 --------------------------------*/
 header {
@@ -228,10 +234,107 @@ main .italic {
     padding: 2rem;
     margin: 10rem 3rem 10rem 3rem;
 }
+
+
+
+
+#wedding {
+    justify-items: center;
+    grid:
+        'wireframe venue'
+        'upper venue'
+        'upper southover'
+        'lunch rom'
+        'lunch rights'
+    auto / 1fr 1fr;
+}
+#wireframe {
+    grid-area: wireframe;
+    width: 108px;
+    height: 98px;
+}
+#upper {
+    grid-area: upper;
+}
+
+.order {
+    width:max-content;
+}
+.order ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.order li {
+    height:100%;
+    text-align: center;
+    padding:.5rem 0;
+    margin:3rem 0;
+    background:white;
+}
+.small-heart {
+    width:21px; height:22px;
+}
+.small-heart .st0 {
+    fill:#FFFFFF;
+}
+#venue {
+    grid-area: venue;
+    align-self:stretch;
+    background: url(assets/Southover1.jpg) center left / cover no-repeat;
+}
+#southover {
+    grid-area: southover;
+    margin:3rem;
+}
+#rights {
+    grid-area: rights;
+    margin: 3rem;
+}
+#rom {
+    grid-area: rom;
+    align-self: stretch;
+    background: url(assets/RoM-Lewes.jpg) center / cover no-repeat;
+}
+#lunch {
+    grid-area: lunch;
+    padding: 3rem;
+}
+#lunch .grid {
+    padding:3rem;
+    grid-template-rows: auto;
+    align-items: center;
+    border: black 3px double;
+    background:white;
+}
+
+#lunch li {
+    text-align: center;
+    padding:.1rem;
+}
+#lunch h3, h5 {
+    padding:.2rem;
+}
+#lunch div {
+    padding:1rem;
+}
+.horizontal {
+    max-height: 3px;
+}
+
+
+
+
+
+
+
+
+
  /*---------------WEDDING-TIMELINE
 --------------------------------*/
 
-#wedding {
+/* #wedding {
     grid:
         'upper'
         'venue'
@@ -291,9 +394,7 @@ main .italic {
 .small-heart .st0 {
     fill:#FFFFFF;
 }
-line, path {
-    fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;
-}
+
 #venue {
     grid-area: venue;
     align-self: stretch;
@@ -332,7 +433,7 @@ line, path {
             'rom rom lunch lunch lunch'
         / 3fr 1fr 1fr 1fr 3fr;
     }
-}
+} */
  /*---------------
 --------------------------------*/
 
