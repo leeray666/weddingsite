@@ -236,7 +236,6 @@ main .italic {
 }
  /*------------------------WEDDING
 --------------------------------*/
-
 #wedding {
     grid:
         'morning'
@@ -262,7 +261,7 @@ main .italic {
     margin:2rem 3rem;
     background: white;
 }
-.upper .small-heart {
+.small-heart {
     margin:2rem 0;
 }
 #wireframe {
@@ -317,7 +316,6 @@ main .italic {
     max-height: 3px;
     margin:1rem 0;
 }
-
 @media only screen and (min-width: 700px) {
     #wedding {
         grid:
@@ -334,7 +332,8 @@ main .italic {
         height:20px;
     }
 }
-
+ /*--------------------------BREAK
+--------------------------------*/
 #break {
     width:100%;
     height:100vh;
@@ -370,7 +369,6 @@ main .italic {
         0px 0px 25px rgba(0,0,0,0.5),
         0px 0px 30px rgba(0,0,0,0.5);
 }
-
 @media only screen and (min-width: 700px) {
     #break {
     grid-template-columns: 1fr 1fr;
@@ -382,8 +380,33 @@ main .italic {
         grid-area: 1/1/2/3;
     }
 }
-
-
+ /*----------------------RECEPTION
+--------------------------------*/
+#reception {
+    grid:
+        'evening'
+    / 1fr;
+}
+#evening {
+    grid-area: evening;
+    grid-template-columns: 1fr auto 1fr;
+}
+.lower {
+    grid-area: 1/2/2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.lower li {
+    padding:.1rem;
+    margin:2rem 3rem;
+    background: white;
+}
+#reception-invite {
+    border: black double 3px;
+    padding: 2rem;
+}
 
 /* 
 #site-break-top.grid {
