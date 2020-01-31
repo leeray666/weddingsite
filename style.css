@@ -12,6 +12,7 @@ html {
     height:100%;
     font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    background:#fafafa;
 }
 :root {
     font-size: 14px;
@@ -53,7 +54,7 @@ line, path {
  /*-------------------------HEADER
 --------------------------------*/
 header {
-    background-color: white;
+    background-color:#fafafa;
 }
 .aspectRatioSizer {
     display: grid;
@@ -171,6 +172,7 @@ main {
     font-family: garamond-premier-pro, serif;
     font-weight: 400;
     font-style: normal;
+    color: #3e3e46;
 }
 main h1, h2, h3, h4, h5, .bold{
     font-family: garamond-premier-pro, serif;
@@ -248,6 +250,7 @@ main .italic {
 #morning {
     grid-area: morning;
     grid-template-columns: 1fr auto 1fr;
+    height:100%;
 }
 .upper {
     grid-area: 1/2/2/3;
@@ -255,24 +258,26 @@ main .italic {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: space-between;
+    
 }
 .upper li {
     padding:.1rem;
-    margin:2rem 3rem;
-    background: white;
+    margin:0 2rem;
+    background: #fafafa;
 }
-.small-heart {
-    margin:2rem 0;
-}
+/* .small-heart {
+    margin:1rem 0 0 0;
+} */
 #wireframe {
     height:15vw;
-    background: white;
+    background: #fafafa;
 }
 .small-heart {
     height:5vw;
 }
 .small-heart .st0 {
-    fill:#FFFFFF;
+    fill:#fafafa;
 }
 #venue {
     grid-area: venue;
@@ -300,7 +305,7 @@ main .italic {
 #lunch ul {
     padding:.5rem;
     border: black 3px double;
-    background: white;
+    background: #fafafa;
 }
 #lunch li {
     text-align: center;
@@ -326,7 +331,7 @@ main .italic {
     }
     #wireframe {
         height:80px;
-        background: white;
+        background: #fafafa;
     }
     .small-heart {
         height:20px;
@@ -363,7 +368,7 @@ main .italic {
 #ebony-and-ivory h2 {
     /* background: rgba(0,0,0,0.55); */
     padding:.3rem;
-    color:white;
+    color:#fafafa;
     text-shadow:
         0px 0px 5px rgba(0,0,0,0.5),
         0px 0px 10px rgba(0,0,0,0.5),
@@ -407,7 +412,7 @@ main .italic {
 .lower li {
     padding:.1rem;
     margin:2rem 3rem;
-    background: white;
+    background: #fafafa;
 }
 #reception-invite {
     border: black double 3px;
