@@ -202,6 +202,36 @@ main .italic {
         / 1fr 1fr;
     }
 }
+
+#links {
+    height:80vh;
+    margin:2rem;  
+}
+#links.grid {
+    place-items: center;
+}
+#links ul {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+#links a {
+    font-size: 1.5rem;
+    background:white;
+    color: #3e3e46;
+    padding:1rem;
+    border: 1px solid black;
+}
+#links li {
+    background:white;
+    padding:2rem 1rem;
+    margin:1rem;
+}
+
+
+
+
  /*-----------------WEDDING-INVITE
 --------------------------------*/
 #wedding-invite {
