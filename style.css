@@ -278,13 +278,6 @@ main .italic {
         border-left-color: transparent;
     }
 }
-
-
-
-
-
-
-
  /*-----------------WEDDING-INVITE
 --------------------------------*/
 #wedding-invite {
@@ -414,55 +407,8 @@ main .italic {
 
 
 
-/* #break {
-    width:100%;
-    height:70vh;
-}
-#fun {
-    grid-area: 1/1/2/2;
-}
-#feet-up {
-    grid-area: 1/1/2/2;
-    width:100%;
-    height:50vh;
-    place-self: center;
-    background: url(assets/Hero-image.jpg) center / cover no-repeat;
-    place-items: center;
-}
-#feet-up div {
-    
-    padding:1rem;
-    margin:2rem;
-    text-align: center;
-}
-#ebony-and-ivory {
-    width:80vw;
-}
-#ebony-and-ivory h3,
-#ebony-and-ivory h2 {
-    padding:.3rem;
-    color:#fafafa;
-    text-shadow:
-        0px 0px 5px rgba(0,0,0,0.5),
-        0px 0px 10px rgba(0,0,0,0.5),
-        0px 0px 15px rgba(0,0,0,0.5),
-        0px 0px 20px rgba(0,0,0,0.5),
-        0px 0px 25px rgba(0,0,0,0.5),
-        0px 0px 30px rgba(0,0,0,0.5);
-}
-@media only screen and (min-width: 700px) {
-    #break {
-    grid-template-columns: 1fr 1fr;
-    height:100vh;
-    }
-    #fun {
-        grid-area: 1/1/2/2;
-    }
-    #feet-up {
-        grid-area: 1/1/2/3;
-        height:70vh;
-    }
-} */
+
+
  /*----------------------RECEPTION
 --------------------------------*/
 #reception {
@@ -496,18 +442,15 @@ main .italic {
     align-self: center;
     background: url(assets/kino.jpg) center / contain no-repeat;
 }
-
 #love.grid {
     grid-template-columns: repeat(10, 10%);
 }
-
 #love span {
     font-size: 30vw;
     line-height: 22vw;
     padding-bottom:30vmin;
     color: black;
 }
-
 @media only screen and (min-width: 700px) {
     #reception {
         grid:
@@ -517,17 +460,21 @@ main .italic {
 }
 
 
+
+
+
+
+
  /*-------------------------FOOTER
 --------------------------------*/
 
 #ankle {
-    background: #fafafa;
     grid-template-rows: auto 24rem 6.3rem;
 }
 #blurb {
     grid-area: 1/1/2/2;
     text-align: center;
-    margin:2rem 1rem;
+    margin:2rem 2rem;
     place-self: center;
 }
 #cartoon {
@@ -560,20 +507,51 @@ main .italic {
     background: #4d6a79;
     grid-gap: 2rem;
     align-items: end;
-    padding:1rem;
+    padding:3rem 1rem;
 }
 #heel p {
-    font-family: futura-pt, sans-serif;
+    font-family: roboto, sans-serif;
     font-weight: 500;
     font-style: normal;
+    letter-spacing: .05rem;
     color:#fafafa;
     padding:1rem;
 }
 #heel li {
-    font-family: futura-pt, sans-serif;
+    font-family: roboto, sans-serif;
     font-weight: 500;
     font-style: normal;
+    letter-spacing: .05rem;
     color:#fafafa;
+}
+footer a, a::after {
+    text-decoration:none;
+    display:inline-block;
+    position:relative;
+    /* text-align:center; */
+    -webkit-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
+}
+footer a:active, a:hover {
+    outline:0;
+}
+footer a::after {
+    content:"";
+    position:absolute;
+    top:92%;
+    height:2px;
+    outline:1px solid transparent;
+    right:1rem;
+    left:1rem;
+    background-color:rgba(255,255,255,1);
+}
+footer a:hover::after {
+    top:100%;
+    height:2px;
+    background-color:rgba(255,255,255,.5);
+}
+.futur {
+    font-size: 1.5rem;
 }
 #rsvp {
     width:100%;
@@ -606,295 +584,3 @@ main .italic {
     width: 100% !important;
     height: 100% !important;
 }
-
-
-/* footer {
-    background: #4d6a79;
-    padding: 2rem;
-    color: #fafafa;
-}
-
-footer a {
-    color: #fafafa;
- }
-
-footer.grid {
-    grid:
-        'rsvp cartoon'
-        'map map'
-    / 1fr 1fr;
-}
-
-#cartoon { grid-area: cartoon;}
-#rsvp { grid-area: rsvp;}
-#map { grid-area: map;}
-
-#rsvp {
-    padding:2rem 0 2rem 0;
-}
-
-.pic.six { background-image: url(assets/cartoon.png); }
-
-#map {
-    position: relative;
-    padding-bottom: 50%;
-    height: 0;
-    overflow: hidden;
-}
-
-#map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-} */
-
- /*--------------------MEDIA QUERY
---------------------------------*/
-
-
-/* @media only screen and (max-width: 700px) {
-
-    main.grid {
-        grid:
-            'lee'
-            'bench'
-            'rach'
-            'shadow'
-            'site-break-top'
-            'venue'
-            'time'
-            'site-break'
-            'love'
-            'rom'
-            'lunch'
-            'heart'
-        / 1fr;
-    }
-    footer.grid {
-        grid:
-            'cartoon' 
-            'rsvp'
-            'map'
-        / 1fr;
-    }
-    #map {
-    padding-bottom: 100%;
-    }
-    #site-break-top svg {
-        grid-area: 1/1/2/11;
-    }
-    #site-break-top article {
-        grid-area: 1/1/2/11;
-
-    }
-} */
-/*-------------------------HEADER
---------------------------------*/
-/* header {
-    background-color:#fafafa;
-}
-.aspectRatioSizer {
-    display: grid;
-}
-.aspectRatioSizer {
-    grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(20, 5vw);
-} 
-.aspectRatioSizer svg {
-    grid-area: 1 / 1 / 11 / 11;
-}
-.header-image {
-    grid-area: 5/1/21/21;
-}
-.sexy-title {
-    grid-area: 1/1/21/21;
-    display:grid;
-    grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(20, 5vw);
-    transform: rotate(-90deg);
-    mix-blend-mode: difference;
-}
-.sexy-title span {
-    grid-area:18/7/20/20;
-    font-family: gill-sans-nova, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 11vw;
-    letter-spacing: 0.5vw;
-    color:#fafafa;
-    mix-blend-mode: difference;
-    align-self: center;
-}
-.date {
-    grid-area: 1/1/21/21;
-    display:grid;
-    grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(20, 5vw);
-} 
-.futur {
-    grid-area:15/2/16/7;
-    font-family: futura-pt, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color:#fafafa;
-}
-.date span {
-    font-size: 5vw;
-    mix-blend-mode: difference;
-    justify-self: start;
-    align-self: center;
-}
-
-
-/* @media only screen and (min-width: 567px) { */
-/* @media only screen and (min-width: 200px) {
-
-    .aspectRatioSizer {
-        grid-template-rows: repeat(15, 5vw);
-    }
-    .aspectRatioSizer svg {
-        grid-area: 1 / 1 / 15 / 21;
-    }
-    .header-image {
-        grid-area: 3/1/14/21;
-    }
-    .sexy-title {
-        grid-area: 1/1/15/21;
-        grid-template-rows: repeat(15, 5vw);
-        transform: rotate(0deg);
-    }
-    .sexy-title span {
-        grid-area:1/6/4/16;
-        font-size: 7vw;
-        letter-spacing:0.35vw;
-        justify-self: center;
-        align-self: end;
-        padding-bottom: 1.8vw;
-    }
-    .date {
-        grid-area: 1/1/15/21;
-        grid-template-rows: repeat(15, 5vw);
-    }
-    .date span {
-        grid-area:13/15/14/19 ;
-        font-size: 3.5vw;
-        padding:0;
-        align-self: center;
-    }
-}
-@media only screen and (min-width: 1920px) {
-
-    .aspectRatioSizer {
-        grid-template-columns: repeat(20, 96px);
-        grid-template-rows: repeat(15, 96px);
-    }
-    .sexy-title {
-        grid-template-columns: repeat(20, 96px);
-        grid-template-rows: repeat(15, 96px);
-    }
-    .sexy-title span {
-        font-size: 135px;
-        letter-spacing:6px;
-        padding-bottom: 34px;
-    }
-    .date {
-        grid-template-columns: repeat(20, 96px);
-        grid-template-rows: repeat(15, 96px);
-    }
-    .date span {
-        font-size: 67px;
-    }
-} */
-
-
-/* .aspectRatioSizer {
-    display: grid;
-}
-.aspectRatioSizer {
-    grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(15, 5vw);
-} 
-.aspectRatioSizer svg {
-    grid-area: 1 / 1 / 15 / 21;
-}
-.header-image {
-    grid-area: 4/1/15/21;
-}
-.sexy-title {
-    grid-area: 1/1/15/21;
-    display:grid;
-    grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(15, 5vw);
-    mix-blend-mode: difference;
-}
-.sexy-title span { 
-    grid-area:2/1/5/21;
-    font-family: gill-sans-nova, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 11vw;
-    letter-spacing: 0.5vw;
-    color:#fafafa;
-    mix-blend-mode: difference;
-    justify-self: center;
-    align-self: end;    
-}
-.date {
-    grid-area: 1/1/15/21;
-    display:grid;
-    grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(15, 5vw);
-}
-.futur {
-    font-family: futura-pt, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color:#fafafa;
-}
-.date span {
-    grid-area:14/15/15/19;
-    font-size: 5vw;
-    mix-blend-mode: difference;
-    justify-self: start;
-    align-self: center;
-}
-@media only screen and (min-width: 567px) {
-    .header-image {
-        grid-area: 3/1/14/21;
-    }
-    .sexy-title span {
-        grid-area: 1/6/4/16;
-        font-size: 7vw;
-        letter-spacing: 0.35vw;
-        padding-bottom: 1.77vw;
-    }
-    .date span {
-        grid-area:13/15/14/19;
-        font-size: 3.5vw;
-        padding:0;
-    }
-}
-@media only screen and (min-width: 1920px) {
-    .aspectRatioSizer {
-        grid-template-columns: repeat(20, 96px);
-        grid-template-rows: repeat(15, 96px);
-    }
-    .sexy-title {
-        grid-template-columns: repeat(20, 96px);
-        grid-template-rows: repeat(15, 96px);
-    }
-    .sexy-title span {
-        font-size: 135px;
-        letter-spacing:6px;
-        padding-bottom: 34px;
-    }
-    .date {
-        grid-template-columns: repeat(20, 96px);
-        grid-template-rows: repeat(15, 96px);
-    }
-    .date span {
-        font-size: 67px;
-    }
-} */
