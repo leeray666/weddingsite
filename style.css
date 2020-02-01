@@ -61,89 +61,69 @@ header {
 }
 .aspectRatioSizer {
     grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(20, 5vw);
+    grid-template-rows: repeat(15, 5vw);
 } 
 .aspectRatioSizer svg {
-    grid-area: 1 / 1 / 11 / 11;
+    grid-area: 1 / 1 / 15 / 21;
 }
 .header-image {
-    grid-area: 5/1/21/21;
+    grid-area: 4/1/15/21;
 }
 .sexy-title {
-    grid-area: 1/1/21/21;
+    grid-area: 1/1/15/21;
     display:grid;
     grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(20, 5vw);
-    transform: rotate(-90deg);
+    grid-template-rows: repeat(15, 5vw);
     mix-blend-mode: difference;
 }
-.sexy-title span {
-    grid-area:18/7/20/20;
+.sexy-title span { 
+    grid-area:2/1/5/21;
     font-family: gill-sans-nova, sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 11vw;
     letter-spacing: 0.5vw;
-    color:white;
+    color:#fafafa;
     mix-blend-mode: difference;
-    align-self: center;
+    justify-self: center;
+    align-self: end;    
 }
 .date {
-    grid-area: 1/1/21/21;
+    grid-area: 1/1/15/21;
     display:grid;
     grid-template-columns: repeat(20, 5vw);
-    grid-template-rows: repeat(20, 5vw);
-    mix-blend-mode: difference;
+    grid-template-rows: repeat(15, 5vw);
 }
-.date span {
-    grid-area:15/2/16/7;
+.futur {
     font-family: futura-pt, sans-serif;
     font-weight: 500;
     font-style: normal;
+    color:#fafafa;
+}
+.date span {
+    grid-area:14/15/15/19;
     font-size: 5vw;
-    color:white;
     mix-blend-mode: difference;
     justify-self: start;
     align-self: center;
 }
 @media only screen and (min-width: 567px) {
-
-    .aspectRatioSizer {
-        grid-template-rows: repeat(15, 5vw);
-    }
-    .aspectRatioSizer svg {
-        grid-area: 1 / 1 / 15 / 21;
-    }
     .header-image {
         grid-area: 3/1/14/21;
     }
-    .sexy-title {
-        grid-area: 1/1/15/21;
-        grid-template-rows: repeat(15, 5vw);
-        transform: rotate(0deg);
-    }
     .sexy-title span {
-        grid-area:1/6/4/16;
+        grid-area: 1/6/4/16;
         font-size: 7vw;
-        letter-spacing:0.35vw;
-        justify-self: center;
-        align-self: end;
-        padding-bottom: 1.8vw;
-    }
-    .date {
-        grid-area: 1/1/15/21;
-        grid-template-rows: repeat(15, 5vw);
+        letter-spacing: 0.35vw;
+        padding-bottom: 1.77vw;
     }
     .date span {
-        grid-area:13/15/14/19 ;
+        grid-area:13/15/14/19;
         font-size: 3.5vw;
         padding:0;
-        justify-self: start;
-        align-self: center;
     }
 }
 @media only screen and (min-width: 1920px) {
-
     .aspectRatioSizer {
         grid-template-columns: repeat(20, 96px);
         grid-template-rows: repeat(15, 96px);
@@ -167,7 +147,6 @@ header {
 }
  /*---------------------------MAIN
 --------------------------------*/
-
 main {
     font-family: garamond-premier-pro, serif;
     font-weight: 400;
@@ -187,12 +166,14 @@ main .italic {
  /*--------------------------STORY
 --------------------------------*/
 #story {
+    margin:2rem;
     grid:
         'lee'
         'bench'
         'rach'
         'shadow'
     / 1fr;
+    grid-gap: 2rem;
 }
 #lee {
     grid-area: lee;
@@ -204,17 +185,15 @@ main .italic {
 }
 #bench {
     grid-area: bench;
-    align-self: end;
-    background: url(assets/Benches-new.jpg) center / contain no-repeat;
+    align-self: stretch;
+    background: url(assets/Benches-new.jpg) center / cover no-repeat;
+
 }
 #shadow { 
     grid-area: shadow;
-    align-self: start;
-    background: url(assets/Shadow-flipped.jpg) center / contain no-repeat;
-}
-#story article {
-    margin: 3rem 3rem;
-}    
+    align-self: stretch;
+    background: url(assets/Shadow-flipped.jpg) center / cover no-repeat;
+} 
 @media only screen and (min-width: 700px) {
     #story {
         grid:
@@ -227,18 +206,18 @@ main .italic {
 --------------------------------*/
 #wedding-invite {
     width:100%;
-    align-items:center;
-    justify-items:center;
+    place-items:center;
 }
 #wedding-invite div {
     text-align:center;
     border: black double 3px;
     padding: 2rem;
-    margin: 10rem 3rem 10rem 3rem;
+    margin: 10rem 2rem 10rem 2rem;
 }
  /*------------------------WEDDING
 --------------------------------*/
 #wedding {
+    margin:2rem;
     grid:
         'morning'
         'venue'
@@ -246,6 +225,7 @@ main .italic {
         'rom'
         'lunch'
     / 1fr;
+    grid-gap: 2rem;
 }
 #morning {
     grid-area: morning;
@@ -259,22 +239,25 @@ main .italic {
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    
 }
 .upper li {
     padding:.1rem;
-    margin:0 2rem;
+    margin:1rem 0;
     background: #fafafa;
 }
-/* .small-heart {
-    margin:1rem 0 0 0;
-} */
 #wireframe {
-    height:15vw;
+    height:3rem;
     background: #fafafa;
+}
+.ring {
+    grid-area:2/2/3/3;
+    height:1rem;
+}
+.ring path {
+    fill: #3e3e46;
 }
 .small-heart {
-    height:5vw;
+    height:1rem;
 }
 .small-heart .st0 {
     fill:#fafafa;
@@ -294,9 +277,7 @@ main .italic {
     background: url(assets/RoM-Lewes.jpg) center / contain no-repeat;
 }
 #lunch {
-    grid-area: lunch;
-    padding:1rem 0;
-    margin: 0 1rem;  
+    grid-area: lunch; 
 } 
 #lunch .grid {
     grid-template-rows: auto;
@@ -309,13 +290,13 @@ main .italic {
 }
 #lunch li {
     text-align: center;
-    padding:.1rem;
+    padding:.1rem 0;
 }
 #lunch h3, h5 {
     padding:.2rem;
 }
 #lunch div {
-    padding:1rem;
+    padding:2rem;
 }
 .horizontal {
     max-height: 3px;
@@ -325,16 +306,8 @@ main .italic {
     #wedding {
         grid:
         'morning venue'
-        'afternoon .'
-        'lunch rom'
+        'rom lunch'
         / 1fr 1fr;
-    }
-    #wireframe {
-        height:80px;
-        background: #fafafa;
-    }
-    .small-heart {
-        height:20px;
     }
 }
  /*--------------------------BREAK
@@ -447,6 +420,94 @@ main .italic {
  /*-------------------------FOOTER
 --------------------------------*/
 
+#ankle {
+    background: #fafafa;
+    grid-template-rows: auto 24rem 6.3rem;
+}
+#blurb {
+    grid-area: 1/1/2/2;
+    text-align: center;
+    margin:2rem 1rem;
+    place-self: center;
+}
+#cartoon {
+    grid-area: 2/1/4/2;
+    height: 28rem;
+    justify-self: center;
+    align-self: end;
+}
+#ground {
+    grid-area: 3/1/4/2;
+    background: #4d6a79;
+    height:100%;
+    align-self: end;
+}
+@media only screen and (min-width: 700px) {
+    #ankle {
+        grid-template-columns: 1fr 1fr;
+    }
+    #blurb {
+        grid-area: 1/1/3/2;
+    }
+    #cartoon {
+        grid-area: 2/2/4/3;
+    }
+    #ground {
+        grid-area: 3/1/5/3;
+    }
+}
+#heel {
+    background: #4d6a79;
+    grid-gap: 2rem;
+    align-items: end;
+    padding:1rem;
+}
+#heel p {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color:#fafafa;
+    padding:1rem;
+}
+#heel li {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color:#fafafa;
+}
+#rsvp {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color:#fafafa;
+}
+#rsvp ul {
+    padding:0.5rem;
+}
+#rsvp li {
+    padding:0.5rem;
+}
+#rsvp a {
+    font-size:1.2rem;
+    padding:0 1rem;
+    color:#fafafa;
+}
+#map {
+    position: relative;
+    padding-bottom: 400px;
+    height: 0;
+    overflow: hidden;
+}
+#map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
 /* footer {
     background: #4d6a79;
     padding: 2rem;
@@ -527,5 +588,122 @@ footer.grid {
     #site-break-top article {
         grid-area: 1/1/2/11;
 
+    }
+} */
+/*-------------------------HEADER
+--------------------------------*/
+/* header {
+    background-color:#fafafa;
+}
+.aspectRatioSizer {
+    display: grid;
+}
+.aspectRatioSizer {
+    grid-template-columns: repeat(20, 5vw);
+    grid-template-rows: repeat(20, 5vw);
+} 
+.aspectRatioSizer svg {
+    grid-area: 1 / 1 / 11 / 11;
+}
+.header-image {
+    grid-area: 5/1/21/21;
+}
+.sexy-title {
+    grid-area: 1/1/21/21;
+    display:grid;
+    grid-template-columns: repeat(20, 5vw);
+    grid-template-rows: repeat(20, 5vw);
+    transform: rotate(-90deg);
+    mix-blend-mode: difference;
+}
+.sexy-title span {
+    grid-area:18/7/20/20;
+    font-family: gill-sans-nova, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 11vw;
+    letter-spacing: 0.5vw;
+    color:#fafafa;
+    mix-blend-mode: difference;
+    align-self: center;
+}
+.date {
+    grid-area: 1/1/21/21;
+    display:grid;
+    grid-template-columns: repeat(20, 5vw);
+    grid-template-rows: repeat(20, 5vw);
+} 
+.futur {
+    grid-area:15/2/16/7;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color:#fafafa;
+}
+.date span {
+    font-size: 5vw;
+    mix-blend-mode: difference;
+    justify-self: start;
+    align-self: center;
+}
+
+
+/* @media only screen and (min-width: 567px) { */
+/* @media only screen and (min-width: 200px) {
+
+    .aspectRatioSizer {
+        grid-template-rows: repeat(15, 5vw);
+    }
+    .aspectRatioSizer svg {
+        grid-area: 1 / 1 / 15 / 21;
+    }
+    .header-image {
+        grid-area: 3/1/14/21;
+    }
+    .sexy-title {
+        grid-area: 1/1/15/21;
+        grid-template-rows: repeat(15, 5vw);
+        transform: rotate(0deg);
+    }
+    .sexy-title span {
+        grid-area:1/6/4/16;
+        font-size: 7vw;
+        letter-spacing:0.35vw;
+        justify-self: center;
+        align-self: end;
+        padding-bottom: 1.8vw;
+    }
+    .date {
+        grid-area: 1/1/15/21;
+        grid-template-rows: repeat(15, 5vw);
+    }
+    .date span {
+        grid-area:13/15/14/19 ;
+        font-size: 3.5vw;
+        padding:0;
+        align-self: center;
+    }
+}
+@media only screen and (min-width: 1920px) {
+
+    .aspectRatioSizer {
+        grid-template-columns: repeat(20, 96px);
+        grid-template-rows: repeat(15, 96px);
+    }
+    .sexy-title {
+        grid-template-columns: repeat(20, 96px);
+        grid-template-rows: repeat(15, 96px);
+    }
+    .sexy-title span {
+        font-size: 135px;
+        letter-spacing:6px;
+        padding-bottom: 34px;
+    }
+    .date {
+        grid-template-columns: repeat(20, 96px);
+        grid-template-rows: repeat(15, 96px);
+    }
+    .date span {
+        font-size: 67px;
     }
 } */
