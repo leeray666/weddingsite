@@ -48,15 +48,20 @@ svg {
     height:100%;
     display:block;
 }
-line, path {
+path {
+    fill:none;stroke:rgb(221, 207, 160);stroke-width:1;stroke-miterlimit:10;
+}
+line {
     fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:10;
 }
 .backline {
-    background: url(/assets/blackpixel.png) center/1px repeat-y;
+    background: url(/assets/gold.gif) center/1px repeat-y;
+}
+img {
+    object-fit: cover;
 }
  /*-------------------------HEADER
 --------------------------------*/
-
 .aspectRatioSizer {
     display: grid;
 }
@@ -126,7 +131,7 @@ line, path {
         font-size: 38px;
     }
 }
- /*---------------------------MAIN
+/*----------------------------MAIN
 --------------------------------*/
 main {
     font-family: garamond-premier-pro, serif;
@@ -144,55 +149,12 @@ main .italic {
     font-weight: 500;
     font-style: italic;
 }
- /*--------------------------STORY
+/*---------------------------LINKS
 --------------------------------*/
-#story {
-    padding:2rem;
-    grid:
-        'lee'
-        'bench'
-        'rach'
-        'shadow'
-    / 1fr;
-    grid-gap: 2rem;
-    /* background:white; */
+#links {
+    background:#2a3554;
 }
-#lee {
-    grid-area: lee;
-    place-self: center;
-}
-#rach {
-    grid-area: rach;
-    place-self: center;
-}
-#bench {
-    grid-area: bench;
-    align-self: stretch;
-    background: url(assets/Benches-new.jpg) center / cover no-repeat;
-
-}
-#shadow { 
-    grid-area: shadow;
-    align-self: stretch;
-    background: url(assets/Shadow-flipped.jpg) center / cover no-repeat;
-} 
-@media only screen and (min-width: 700px) {
-    #story {
-        grid:
-            'lee bench'
-            'shadow rach'
-        / 1fr 1fr;
-    }
-}
-.links {
-    display: grid;
-    place-items: center;
-    text-align: center;
-}
-#menu h5 {
-    padding: 2rem;
-}
-.links ul {
+#links ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -278,12 +240,60 @@ main .italic {
         border-left-color: transparent;
     }
 }
+ /*--------------------------STORY
+--------------------------------*/
+#story {
+    grid:
+        'lee'
+        'bench'
+        'rach'
+        'shadow'
+    / 1fr;
+}
+article {
+    margin:2rem;
+}
+#lee {
+    grid-area: lee;
+    place-self: center;
+    background: #cccdcb;
+    color:#2a3554;
+    height:100%;
+}
+#rach {
+    background:#3e3e46 ;
+    grid-area: rach;
+    place-self: center;
+    height:100%;
+    color:#fafafa;
+}
+#bench {
+    grid-area: bench;
+    align-self: stretch;
+    background: url(assets/Benches-new.jpg) center / cover no-repeat;
+}
+#shadow { 
+    grid-area: shadow;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-self: stretch;
+} 
+@media only screen and (min-width: 700px) {
+    #story {
+        grid:
+            'lee bench'
+            'shadow rach'
+        / 1fr 1fr;
+    }
+}
  /*-----------------WEDDING-INVITE
 --------------------------------*/
 #wedding-invite {
     width:100%;
     place-items:center;
     padding:2rem;
+    background:#705a69;
 }
 .invite-outer {
     background:#fafafa;
@@ -297,7 +307,6 @@ main .italic {
  /*------------------------WEDDING
 --------------------------------*/
 #wedding {
-    margin:2rem;
     grid:
         'morning'
         'venue'
@@ -305,12 +314,11 @@ main .italic {
         'rom'
         'lunch'
     / 1fr;
-    grid-gap: 2rem;
 }
 #morning {
+    background: #291c41;
     grid-area: morning;
-    margin:0 auto;
-    height:100%;
+    padding:2rem;
     grid-template-rows: min-content auto min-content;
 }
 #wireframe {
@@ -323,30 +331,34 @@ main .italic {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .upper li {
-    padding:.2rem .3rem;
-    margin:1rem 0;
-    background: #fafafa;
+    color:rgb(221, 207, 160);
+    background: #291c41;
 }
 .ring {
     grid-area:3/1/4/2;
     height:1rem;
 }
 .ring path {
-    fill: #fafafa;
+    fill: #291c41;
 }
 .small-heart {
     height:1rem;
 }
 .small-heart .st0 {
-    fill:#fafafa;
+    fill:#291c41;
 }
 #venue {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-area: venue;
     align-self: stretch;
-    background: url(assets/Southover1.jpg) center left / cover no-repeat;
+}
+img {
+    object-fit: cover;
 }
 #afternoon {
     grid-area: afternoon;
@@ -359,24 +371,22 @@ main .italic {
 }
 #lunch {
     font-size: 0.9rem;
-    grid-area: lunch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background: #fafafa;
-    padding:1rem;
+    padding: 1rem;
 } 
-#lunch .grid {
-    grid-template-rows: auto;
-    place-items: center;
-}
 #lunch ul {
     display: block;
     text-align: center;
-    padding:.5rem;
+    padding:2rem .5rem;
     border: black 3px double;
     background: #fafafa;
 }
 #lunch li {
-    display: inline;
-    width: max-content;
+    display: block;
+    /* width: max-content; */
     text-align: center;
     padding:.1rem 0;
 }
@@ -397,82 +407,57 @@ main .italic {
 }
  /*--------------------------BREAK
 --------------------------------*/
-#break {
-    margin:2rem;
+.break {
+    background:#2a3554;
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-items: center;
 }
-#base {
-    mix-blend-mode: multiply;
+.break-inner {
+    color:#f1e5ef;
+    font-size: 1.5rem;
+    text-align: center;  
+    letter-spacing: .12rem;
+    word-spacing: 0.13rem;
+    line-height: 2rem;
+    margin:4rem 1rem;
+    max-width: 900px;
+    grid-area: 1/2/2/3; 
 }
-
-
-
-
-
-
+.break-inner h2{
+    margin:2rem 0;
+}
+.break-inner h4 {
+    margin:2rem 0;
+}
  /*----------------------RECEPTION
 --------------------------------*/
-#reception {
-    grid:
-        'evening'
-        'kino'
-    / 1fr;
+.aspectRatioSizer-two {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(6, calc(100vw/6));
+    grid-template-rows: repeat(6, calc(100vw/6));
+    font-size: 6vw;
+
 }
-#evening {
-    grid-area: evening;
-    grid-template-columns: 1fr auto 1fr;
-}
-.lower {
-    grid-area: 1/2/2/3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.lower li {
-    padding:.1rem;
-    margin:2rem 3rem;
-    background: #fafafa;
-}
-#reception-invite {
-    border: black double 3px;
-    padding: 2rem;
-}
-#kino {
-    grid-area: kino;
-    align-self: center;
-    background: url(assets/kino.jpg) center / contain no-repeat;
-}
-#love.grid {
-    grid-template-columns: repeat(10, 10%);
-}
-#love span {
-    font-size: 30vw;
-    line-height: 22vw;
-    padding-bottom:30vmin;
-    color: black;
-}
-@media only screen and (min-width: 700px) {
-    #reception {
-        grid:
-        'evening kino'
-        / 1fr 1fr;
+@media only screen and (min-width: 1920px) {
+    .aspectRatioSizer-two {
+        grid-template-columns: repeat(6, 320px);
+        grid-template-rows: repeat(6, 320px);
     }
 }
-
-
-
-
-
-
-
- /*-------------------------FOOTER
+/*--------------------------FOOTER
 --------------------------------*/
-
 #ankle {
     grid-template-rows: auto 24rem 6.3rem;
 }
 #blurb {
     grid-area: 1/1/2/2;
+    font-family: amatic-sc, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 2.5rem;
     text-align: center;
     margin:2rem 2rem;
     place-self: center;
@@ -528,7 +513,6 @@ footer a, a::after {
     text-decoration:none;
     display:inline-block;
     position:relative;
-    /* text-align:center; */
     -webkit-transition:all .3s ease-in-out;
     transition:all .3s ease-in-out;
 }
