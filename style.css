@@ -30,10 +30,7 @@ body {
     margin: 0 auto;
     max-width: 1920px;
     overflow-x: hidden;
-    background: rgb(250,250,250);
-    background: radial-gradient(circle, rgba(250,250,250,1) 40%, rgba(193,197,207,1) 100%);          
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background: rgb(250,250,250); 
 }
   header, main, footer {
     width:100%;
@@ -274,10 +271,8 @@ article {
 }
 #shadow { 
     grid-area: shadow;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     align-self: stretch;
+    background: url(assets/cubes1.jpg) center / cover no-repeat;
 } 
 @media only screen and (min-width: 700px) {
     #story {
@@ -331,11 +326,12 @@ article {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .upper li {
     color:rgb(221, 207, 160);
     background: #291c41;
+    margin:1rem 0;
 }
 .ring {
     grid-area:3/1/4/2;
@@ -351,14 +347,9 @@ article {
     fill:#291c41;
 }
 #venue {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-area: venue;
     align-self: stretch;
-}
-img {
-    object-fit: cover;
+    background: url(assets/cubes2.jpg) right / cover no-repeat;
 }
 #afternoon {
     grid-area: afternoon;
@@ -386,7 +377,6 @@ img {
 }
 #lunch li {
     display: block;
-    /* width: max-content; */
     text-align: center;
     padding:.1rem 0;
 }
@@ -448,6 +438,11 @@ img {
 }
 /*--------------------------FOOTER
 --------------------------------*/
+footer{
+    background: radial-gradient(circle, rgba(250,250,250,1) 40%, rgba(193,197,207,1) 100%);          
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 #ankle {
     grid-template-rows: auto 24rem 6.3rem;
 }
