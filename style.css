@@ -59,6 +59,10 @@ img {
 }
  /*-------------------------HEADER
 --------------------------------*/
+header {
+    background:#2a3554;
+}
+
 .aspectRatioSizer {
     display: grid;
 }
@@ -272,7 +276,7 @@ article {
 #shadow { 
     grid-area: shadow;
     align-self: stretch;
-    background: url(assets/cubes1.jpg) center / cover no-repeat;
+    background: url(assets/cubes1.jpg) right / cover no-repeat;
 } 
 @media only screen and (min-width: 700px) {
     #story {
@@ -349,7 +353,7 @@ article {
 #venue {
     grid-area: venue;
     align-self: stretch;
-    background: url(assets/cubes2.jpg) right / cover no-repeat;
+    background: url(assets/cubes2.jpg) center / cover no-repeat;
 }
 #afternoon {
     grid-area: afternoon;
